@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../login_register/config.php';
+require_once 'config.php';
 
 $isLoggedIn = isset($_SESSION['logged_in'])
     && $_SESSION['logged_in'] === true;
@@ -355,8 +355,8 @@ if (isset($_SESSION['cart'])) {
                 </a>
                 <a
                     href="<?= $isUser
-                        ? 'http://localhost/login_register/user_page.php'
-                        : 'http://localhost/login_register/' ?>"
+                        ? 'user_page.php'
+                        : 'login.php' ?>"
                     class="icon"
                     aria-label="Account"
                 >

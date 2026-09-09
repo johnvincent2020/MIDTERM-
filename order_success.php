@@ -4,7 +4,7 @@ if (
     !isset($_SESSION['logged_in']) ||
     $_SESSION['logged_in'] !== true
 ) {
-    header("Location: http://localhost/login_register/");
+    header("Location: login.php");
     exit();
 }
 $orderId = $_SESSION['last_order_id'] ?? null;
@@ -214,7 +214,7 @@ if (!$orderId) {
                 CONTINUE SHOPPING
             </a>
             <a
-                href="http://localhost/login_register/user_page.php"
+                href="user_page.php"
                 class="button account-button"
             >
                 MY ACCOUNT

@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once '../login_register/config.php';
+require_once 'config.php';
 
 $isLoggedIn = isset($_SESSION['logged_in'])
     && $_SESSION['logged_in'] === true;
@@ -1036,8 +1036,8 @@ if ($isUser && isset($_SESSION['user_id'])) {
                 </a>
                 <a
                     href="<?= $isUser
-                        ? 'http://localhost/login_register/user_page.php'
-                        : 'http://localhost/login_register/' ?>"
+                        ? 'user_page.php'
+                        : 'login.php' ?>"
                     class="icon"
                     aria-label="Account"
                 >
@@ -1459,7 +1459,7 @@ if ($isUser && isset($_SESSION['user_id'])) {
                         before starting a conversation with us.
                     </p>
                     <a
-                        href="http://localhost/login_register/"
+                        href="login.php"
                         class="chat-login-link"
                     >
                         LOGIN TO MESSAGE US

@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once '../login_register/config.php';
+require_once 'config.php';
 
 
 $isLoggedIn = isset($_SESSION['logged_in'])
@@ -33,7 +33,7 @@ if (isset($_POST['add_to_cart'])) {
 
     if (!$isLoggedIn) {
 
-        header("Location: http://localhost/login_register/");
+        header("Location: login.php");
         exit();
 
     }
@@ -1343,8 +1343,8 @@ unset($_SESSION['cart_message']);
 
                 <a
                     href="<?= $isUser
-                        ? 'http://localhost/login_register/user_page.php'
-                        : 'http://localhost/login_register/' ?>"
+                        ? 'user_page.php'
+                        : 'login.php' ?>"
                     class="icon"
                     aria-label="Account"
                 >
@@ -1784,7 +1784,7 @@ unset($_SESSION['cart_message']);
 
 
                         <a
-                            href="<?= $isLoggedIn ? 'checkout.php' : 'http://localhost/login_register/' ?>"
+                            href="<?= $isLoggedIn ? 'checkout.php' : 'login.php' ?>"
                             class="checkout-button"
                         >
                             CHECKOUT
